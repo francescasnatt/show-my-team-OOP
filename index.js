@@ -123,7 +123,7 @@ function writeToFile(fileName, data) {
             internPrompt();
         } else {
         const teamInfo = render(teamMembers);
-        writeToFile('index.html', teamInfo);
+        writeToFile('team.html', teamInfo);
         }
       });
   }
@@ -140,7 +140,7 @@ function writeToFile(fileName, data) {
             internPrompt();
         } else {
         const teamInfo = render(teamMembers);
-        writeToFile('index.html', teamInfo);
+        writeToFile('team.html', teamInfo);
         }
       });
   }
@@ -157,7 +157,7 @@ function writeToFile(fileName, data) {
             internPrompt();
         } else {
         const teamInfo = render(teamMembers);
-        writeToFile('index.html', teamInfo);
+        writeToFile('team.html', teamInfo);
         }
       });
   }
