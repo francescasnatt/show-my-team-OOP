@@ -109,6 +109,15 @@ function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>
   {err ? console.error(err) : console.log("Success!")});
 }
+
+// TO DO: incorporate this block into codebase to generate output directory
+function buildTeam() {
+  // Create the output directory if the output path doesn't exist
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    fs.mkdirSync(OUTPUT_DIR)
+  }
+  fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+}
   
   // function to initialize program
   function managerPrompt() {
