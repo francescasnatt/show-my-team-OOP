@@ -105,12 +105,12 @@ const managerQs = [
   ];
 
   // function to render info to page
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) =>
-  {err ? console.error(err) : console.log("Success!")});
-}
+// function writeToFile(fileName, data) {
+//   fs.writeFile(fileName, data, (err) =>
+//   {err ? console.error(err) : console.log("Success!")});
+// }
 
-// TO DO: incorporate this block into codebase to generate output directory
+// function to render info to page
 function buildTeam() {
   // Create the output directory if the output path doesn't exist
   if (!fs.existsSync(OUTPUT_DIR)) {
@@ -132,7 +132,7 @@ function buildTeam() {
             internPrompt();
         } else {
         const teamInfo = render(teamMembers);
-        writeToFile('team.html', teamInfo);
+        buildTeam('team.html', teamInfo);
         }
       });
   }
@@ -149,7 +149,7 @@ function buildTeam() {
             internPrompt();
         } else {
         const teamInfo = render(teamMembers);
-        writeToFile('team.html', teamInfo);
+        buildTeam('team.html', teamInfo);
         }
       });
   }
@@ -166,7 +166,7 @@ function buildTeam() {
             internPrompt();
         } else {
         const teamInfo = render(teamMembers);
-        writeToFile('team.html', teamInfo);
+        buildTeam('team.html', teamInfo);
         }
       });
   }
